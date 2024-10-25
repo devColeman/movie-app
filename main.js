@@ -16,8 +16,8 @@ import z from '/api.js'
   fetch('https://api.themoviedb.org/3/trending/movie/week?language=en-US', options)
   .then(res => res.json())
   .then(res => {
-    console.log(res.results[0])
-    console.log(res.original_title)
+    // console.log(res.results[0])
+    // console.log(res.original_title)
    
     const baseURL = "https://image.tmdb.org/t/p/w500";
     
