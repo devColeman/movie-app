@@ -1,6 +1,7 @@
 import z from '/api.js'
 
   document.querySelector('#wishlist').addEventListener('click', addToWishlist)
+  document.querySelector('#removeWishlist').addEventListener('click', removeWishlist)
 
   const options = {
     method: 'GET',
@@ -31,17 +32,17 @@ import z from '/api.js'
   .catch(err => console.error(err));
 
 
+function removeWishlist(){
+localStorage.removeItem('Favorite')
+
+
+}
 
 function addToWishlist(){
 localStorage.setItem("Favorite", document.querySelector('h1').innerHTML )
 const value = localStorage.getItem('Favorite');
 
-if(wishList.includes(value)){
-return
-}else{
-    wishList.push(value)
 
-} 
 
 }
 
